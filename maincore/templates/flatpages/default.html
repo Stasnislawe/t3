@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Домашняя страница</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <nav>
+        <div><a href="{% url 'index' %}">Главная</a></div>
+        <div><a href="/mineral/">Rest API</a></div>
+        <div><a href="{% url 'upload' %}">Загрузить Excel</a></div>
+        {% if request.user.is_not_authenticated %}
+        <div><a>Авторизация</a></div>
+        {% endif %}
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    <footer>
+        <a>О нас</a>
+        <a>Контакты</a>
+    </footer>
+</body>
+</html>

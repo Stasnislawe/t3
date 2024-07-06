@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+{% block content %}
+<main>
+    <div class="div__form">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <input type="file" name="file">
+            </div>
+            <button type="submit">Загрузить Файл</button>
+        </form>
+    </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{% extends "rest_framework/base.html" %}
+
+{% block title %} Api TEST {% endblock %}
+
+    {% block branding %}
+    <span>
+        <a class='navbar-brand' rel="nofollow" href="{% url 'index' %}">Главная страница</a>
+    </span>
+    <span class="span2api">
+        <a class='navbar-brand' rel="nofollow" href="{% url 'upload' %}">Загрузка Excel</a>
+    </span>
+    {% endblock %}

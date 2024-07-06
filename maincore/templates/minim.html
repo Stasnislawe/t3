@@ -1,0 +1,51 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% block content %}
+<main>
+    <div class="main_top_name">
+        <div class="top_name">Содержание концентраций за месяц {{ current_page|currency }}</div>
+    </div>
+    <section>
+        <div class="conc_item">
+            <div class="conc_name">Содержание железа:</div>
+            <div class="conc">
+                {% for i, x in iron_content.items %}
+                <div>{{ i|translate }}:</div><div>{{ x|percent }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="conc_item">
+            <div class="conc_name">Содержание кремния:</div>
+            <div class="conc">
+                {% for i, x in si_content.items %}
+                <div>{{ i|translate }}:</div><div>{{ x|percent }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="conc_item">
+            <div class="conc_name">Содержание серы:</div>
+            <div class="conc">
+                {% for i, x in sulfur_content.items %}
+                <div>{{ i|translate }}:</div><div>{{ x|percent }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="conc_item">
+            <div class="conc_name">Содержание кальция:</div>
+            <div class="conc">
+                {% for i, x in ca_content.items %}
+                <div>{{ i|translate }}:</div><div>{{ x|percent }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="conc_item">
+            <div class="conc_name">Содержание алюминия:</div>
+            <div class="conc">
+                {% for i, x in al_content.items %}
+                <div>{{ i|translate }}:</div><div>{{ x|percent }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}

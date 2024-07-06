@@ -1,0 +1,204 @@
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    background-image: linear-gradient(#525359, 80%, #3F3F43);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15%;
+    border-bottom: 3px solid aquamarine;
+
+    div a {
+        background-color: white;
+        border-radius: 10%;
+        border: 1px solid aquamarine;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px 15px;
+        box-shadow: 3px 2px 2px aquamarine;
+
+        &:hover {
+            color: aquamarine;
+            background-color: transparent;
+        }
+    }
+}
+
+main {
+    margin: 0px;
+    min-height: 75%;
+    background-image: url("https://www.eiir.eu/wp-content/uploads/2023/12/textured-pattern-rough-stone-material-generated-by-ai-scaled.jpg");
+
+    .div__form {
+        display: flex;
+        justify-content: center;
+        padding-top: 5%;
+
+        form {
+            backdrop-filter: blur(5px);
+            width: 25%;
+            padding: 25px 5px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            button {
+                margin-top: 10px;
+                font-size: 15px;
+                font-weight: bold;
+                border-radius: 10px;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+
+            div {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            div > input[type=file]::file-selector-button {
+                font-weight: bold;
+                font-size: 15px;
+                padding: 10px 15px;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main_top_name {
+        display: flex;
+        padding-top: 15px;
+        justify-content: center;
+    }
+
+        .top_name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            padding: 10px 5px;
+            border-radius: 20px;
+            color: aquamarine;
+            width: 35%;
+            backdrop-filter: blur(5px);
+            font-size: 20px;
+        }
+
+    section {
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px 20px;
+
+        .conc_item {
+            background-color: grey;
+            height: 400px;
+            width: 260px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px aquamarine;
+            border: 2px solid aquamarine;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .conc_name {
+                padding: 15px 5px;
+                font-weight: bold;
+                height: 10%;
+            }
+
+            .conc {
+                margin-bottom: 40%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
+
+                div:nth-of-type(2n) {
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .months {
+            background-color: grey;
+            border-radius: 10%;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid aquamarine;
+            box-shadow: 5px 5px 5px aquamarine;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.25);
+                box-shadow: 5px 5px 5px #14D100;
+                border: 2px solid #14D100;
+            }
+
+            &:hover > .wrap > .item:first-child {
+                border-bottom: 1px solid #14D100;
+            }
+
+            .wrap {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 16px;
+
+                .item {
+                    display: flex;
+                    justify-content: center;
+                    width: 90%;
+
+                    &:first-child {
+                        font-weight: bold;
+                        border-bottom: 1px solid aquamarine;
+                        padding-bottom: 10px;
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+
+                    &:last-child {
+                        padding: 5px 0px;
+                    }
+                }
+            }
+
+            &:hover > .wrap {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+footer {
+    background-image: linear-gradient(#525359, 10%, #3F3F43);
+    margin-bottom: 0;
+    border-top: 3px solid aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-decoration-color: none;
+}

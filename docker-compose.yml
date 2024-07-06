@@ -1,0 +1,41 @@
+version: '3.9'
+
+services:
+  web:
+    build: ./maincore
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/:/maincore/
+    ports:
+      - 8000:8000
+    env_file:
+      - maincore/.env
+
+  db:
+    image: postgres:16
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - maincore/.env
+    depends_on:
+      - pgadmin
+#    ports:
+#      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container2
+    environment:
+      PGADMIN_DEFAULT_EMAIL: exampleteeeeeee@mail.ru
+      PGADMIN_DEFAULT_PASSWORD_FILE: testewtawtw
+    ports:
+      - "5050:80"
+    env_file:
+      - maincore/.env
+    volumes:
+      - postgres_admin:/var/lib/postgresql/data/admin
+
+volumes:
+  postgres_admin:
+  postgres_data:
