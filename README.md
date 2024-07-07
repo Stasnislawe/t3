@@ -13,6 +13,7 @@ REST API:
   "Дата добавления"
 
   Так же есть возможность добавить данные из Excel:
-  Формат добавления ![image](https://github.com/Stasnislawe/t3/assets/147979384/748dcbdb-536e-428f-882b-efe5b9be1ce7)
+  Формат добавления:
+  ![image](https://github.com/Stasnislawe/t3/assets/147979384/748dcbdb-536e-428f-882b-efe5b9be1ce7)
   дату обязательно в кавычках!
 
